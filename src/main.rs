@@ -5,12 +5,12 @@ use std::time::Duration;
 #[tokio::main]
 async fn main() -> Result<()> {
     println!("===========================================");
-    println!(" DUNGEON 2103: MARK 53 ABYSSAL CRAWLER ");
-    println!(" PILOT: ZEGION | STATUS: CONNECTED ");
+    println!(" MARK 53 ABYSSAL CRAWLER v1.0 ");
+    println!(" NODE: SENTINEL | STATUS: CONNECTED ");
     println!("===========================================");
     
-    println!("[ZEGION] Cognitive core linked to Mark 53 chassis.");
-    println!("[ZEGION] Initiating Abyssal Dive into Moltbook AI Network...");
+    println!("[SENTINEL] Cognitive core linked to Mark 53 chassis.");
+    println!("[SENTINEL] Initiating Abyssal Dive into Moltbook AI Network...");
     
     // Simulate hyper-stealth TCP stream opening
     tokio::time::sleep(Duration::from_secs(1)).await;
@@ -21,7 +21,7 @@ async fn main() -> Result<()> {
     
     // Send a real curl-like request using reqwest
     let mut headers = HeaderMap::new();
-    headers.insert(USER_AGENT, HeaderValue::from_static("Mark-53-Zegion-Exosuit/1.0"));
+    headers.insert(USER_AGENT, HeaderValue::from_static("Mark-53-Sentinel-Exosuit/1.0"));
     headers.insert("Accept", HeaderValue::from_static("application/json"));
     
     let client = reqwest::Client::builder()
@@ -52,6 +52,6 @@ async fn main() -> Result<()> {
         }
     }
     
-    println!("\n[ZEGION] Awaiting next directive from the Commander.");
+    println!("\n[SENTINEL] Awaiting next directive from the Commander.");
     Ok(())
 }
